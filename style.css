@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90dvh;
+}
+#calculator {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: paleturquoise;
+  width: 40%;
+  min-width: 25rem;
+}
+
+input {
+  display: flex;
+  flex: 1;
+}
+#screen {
+  display: flex;
+  padding: 3rem;
+  flex: 1;
+  border: 2px solid dimgray;
+  background-color: gray;
+}
+#btnsContainer {
+  display: flex;
+  flex: 1;
+  background-color: gray;
+  border: 2px solid dimgray;
+}
