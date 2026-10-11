@@ -6,26 +6,34 @@
   box-sizing: border-box;
   border: 0;
 }
+
 #container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 90dvh;
+  gap: 30px;
+  padding: 10px;
+  min-height: 95dvh;
 }
+
+#calculatorContainer {
+  display: flex;
+  justify-content: center;
+  flex: 5;
+}
+
 #calculator {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: paleturquoise;
-  width: 40%;
-  min-width: 25rem;
+  min-width: 30%;
+  max-width: 40%;
 }
-
 input {
   display: flex;
   flex: 1;
+  /* To stop the input from going out of the div as a bug */
+  min-width: 0;
 }
+
 #screen {
   display: flex;
   padding: 3rem;
@@ -33,9 +41,46 @@ input {
   border: 2px solid dimgray;
   background-color: gray;
 }
+
 #btnsContainer {
   display: flex;
-  flex: 1;
+  flex: 2;
   background-color: gray;
   border: 2px solid dimgray;
+}
+
+#numbersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2;
+  /* May change the gap to only row gaps and no/less column gaps */
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+#settingsContainer {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 10px;
+  padding: 10px;
+}
+
+.numberBtn {
+  background-color: white;
+  flex: 1 1 30%;
+}
+
+.settingsBtn {
+  background-color: white;
+  flex: 1 1 30%;
+}
+
+#logsContainer {
+  display: flex;
+  flex: 1;
+  border-left: 2px solid brown;
+  justify-content: center;
 }
