@@ -3,8 +3,16 @@ const screen = document.querySelector("input");
 
 const numbersContainer = document.getElementById("numbersContainer");
 const settingsContainer = document.getElementById("settingsContainer");
-
-// ARITHMETIC FUNCTIONS
+//
+// TODO:
+// Create the opearator function that takes an operator and 2 numbers and calls a function
+// Make the buttons and caclculator have rounded corners and make the buttons appear more better
+// Make an array of the settings buttons and make the button maker loop on the array instead of i
+// Clean the input screen and make it better
+// Increase the font sizes
+// remove the logs for now and come back to it later
+// Add event handlers for the buttons and the settings
+//
 function add(num1, num2) {
   return num1 + num2;
 }
