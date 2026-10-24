@@ -17,7 +17,6 @@ button,
 
 #contentContainer {
   display: flex;
-  gap: 30px;
   padding: 10px;
   min-height: 95dvh;
 }
@@ -42,6 +41,7 @@ input {
   flex: 1;
   /* To stop the input from going out of the div as a bug */
   min-width: 0;
+  font-size: clamp(1rem, 2vw + 1rem, 3rem);
 }
 
 #screen {
@@ -51,7 +51,7 @@ input {
   border-bottom: 2px solid dimgray;
 }
 
-#btnsContainer {
+#buttonsContainer {
   display: flex;
   flex: 2;
 }
@@ -61,7 +61,7 @@ input {
   flex-wrap: wrap;
   flex: 2;
   /* May change the gap to only row gaps and no/less column gaps */
-  gap: 10px;
+  gap: 15px 10px;
   justify-content: center;
   padding: 10px;
 }
@@ -89,7 +89,7 @@ button:hover {
 .numberBtn {
   border: solid darkslategray 2px;
   background-color: powderblue;
-  font-size: large;
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1.25rem);
   flex: 1 1 30%;
 }
 .settingsBtn {
