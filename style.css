@@ -18,7 +18,7 @@ button,
 #contentContainer {
   display: flex;
   padding: 10px;
-  min-height: 95dvh;
+  min-height: 80dvh;
 }
 
 #calculatorContainer {
@@ -30,9 +30,8 @@ button,
 #calculator {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-width: 20%;
-  max-width: 30%;
+  max-width: 25%;
+  min-width: 400px;
   background-color: gray;
   border: 2px solid dimgray;
 }
@@ -41,7 +40,7 @@ input {
   flex: 1;
   /* To stop the input from going out of the div as a bug */
   min-width: 0;
-  font-size: clamp(1rem, 2vw + 1rem, 3rem);
+  font-size: 2rem;
 }
 
 #screen {
