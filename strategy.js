@@ -52,10 +52,11 @@ for (let i = 1; i < 11; i++) {
   numbersContainer.appendChild(numberBtn);
 }
 
-for (let i = 0; i < 8; i++) {
+const settings = ["+", "-", "/", "x", "AC", "DEL", "="];
+for (const button of settings) {
   const settingsBtn = document.createElement("button");
   settingsBtn.classList.add("settingsBtn");
-  settingsBtn.textContent = i;
+  settingsBtn.textContent = button;
   handleSettingsButton(settingsBtn);
   settingsContainer.appendChild(settingsBtn);
 }
