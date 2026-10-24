@@ -45,14 +45,33 @@ input {
 
 #screen {
   display: flex;
-  padding: 2rem;
+  flex-direction: column;
+  padding: 1rem;
   flex: 1;
-  border-bottom: 2px solid dimgray;
+  background-color: white;
+  margin: 2rem;
+}
+.screenAlternative {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  font-size: 2rem;
+}
+#num1 {
+  flex: 1;
+  background-color: white;
+  min-width: 0;
+}
+#operator {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #buttonsContainer {
   display: flex;
   flex: 2;
+  border-top: 2px solid dimgray;
 }
 
 #numbersContainer {
@@ -89,11 +108,14 @@ button:hover {
   border: solid darkslategray 2px;
   background-color: powderblue;
   font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1.25rem);
+  font-weight: bold;
   flex: 1 1 30%;
 }
 .settingsBtn {
   background-color: orange;
   border: solid black 2px;
+  font-size: clamp(0.875rem, 1.5vw + 0.25rem, 1.25rem);
+  font-weight: bold;
   flex: 1;
   min-width: 50px;
   min-height: 75px;
