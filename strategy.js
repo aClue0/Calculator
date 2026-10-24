@@ -98,8 +98,37 @@ buttonsContainer.addEventListener("click", (ev) => {
       }
       screen.value = "";
     } else {
+      switch (ev.target.dataset.operator) {
+        case "AC":
+          reset();
+          break;
+        case "=":
+          if (num1) {
+            let result = operation(
+              operator,
+              Number(num1),
+              Number(screen.value),
+            );
+            reset();
+            screen.value = result;
+          }
+          break;
+        case "DEL":
+          if (!screen.value) {
+            if (num1) {
+              let value = num1;
+              reset();
+              screen.value = value;
+            }
+          } else screen.value = screen.value.slice(0, screen.value.length - 1);
+          break;
+
+        default:
+          break;
+      }
     }
   }
 });
+//
 //TODO: add event listner to numbers to the calculator
 document.addEventListener("keydown", (ev) => {});
