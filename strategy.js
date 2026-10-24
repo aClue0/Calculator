@@ -62,10 +62,19 @@ function operation(operator, num1, num2) {
   }
 }
 
+let num1 = 0;
+let operator = "";
+
+function reset() {
+  num1 = null;
+  operator = "";
+  alternativeNumber.textContent = "";
+  operatorSign.textContent = "";
+  screen.value = "";
+}
 buttonsContainer.addEventListener("click", (ev) => {
   if (ev.target.matches(".numberBtn")) {
-    const number = Number(ev.target.textContent);
-    screen.value += number;
+    screen.value += ev.target.textContent;
   }
 
   if (ev.target.matches(".settingsBtn")) {
