@@ -41,9 +41,6 @@ function operation(operator, num1, num2) {
   }
 }
 
-function handleNumbersButton(button) {}
-function handleSettingsButton(button) {}
-
 for (let i = 1; i < 11; i++) {
   const numberBtn = document.createElement("button");
   numberBtn.classList.add("numberBtn");
@@ -57,6 +54,15 @@ for (const button of settings) {
   const settingsBtn = document.createElement("button");
   settingsBtn.classList.add("settingsBtn");
   settingsBtn.textContent = button;
-  handleSettingsButton(settingsBtn);
   settingsContainer.appendChild(settingsBtn);
 }
+
+numbersContainer.addEventListener("click", (ev) => {
+  if (ev.target.matches(".numberBtn")) {
+    const number = Number(ev.target.textContent);
+    screen.value += number;
+  }
+
+  if (ev.target.matches(".settingsBtn")) {
+  }
+});
