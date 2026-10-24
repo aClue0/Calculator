@@ -3,6 +3,8 @@ const screen = document.querySelector("input");
 const numbersContainer = document.getElementById("numbersContainer");
 const settingsContainer = document.getElementById("settingsContainer");
 const buttonsContainer = document.getElementById("buttonsContainer");
+const alternativeNumber = document.getElementById("num1");
+const operatorSign = document.getElementById("operator");
 
 // Create the buttons using DOM
 for (let i = 1; i < 11; i++) {
