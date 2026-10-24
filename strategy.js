@@ -79,8 +79,24 @@ buttonsContainer.addEventListener("click", (ev) => {
 
   if (ev.target.matches(".settingsBtn")) {
     const operators = ["+", "-", "/", "x"];
-    const operator = ev.target.dataset.operator;
-    if (operators.includes(operator)) {
+    const currentOperator = ev.target.dataset.operator;
+    if (operators.includes(currentOperator)) {
+      if (num1 || screen.value) {
+        if (!operator) operator = currentOperator;
+        if (num1) {
+          let result = operation(operator, Number(num1), Number(screen.value));
+          reset();
+          num1 = result;
+          alternativeNumber.textContent = num1;
+        }
+        operator = currentOperator;
+        operatorSign.textContent = currentOperator;
+      }
+      if (screen.value) {
+        num1 = screen.value;
+        alternativeNumber.textContent = num1;
+      }
+      screen.value = "";
     } else {
     }
   }
